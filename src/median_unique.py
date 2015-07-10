@@ -1,14 +1,36 @@
 # example of program that calculates the median number of unique words per tweet.
-import statistics
+try:
+    import statistics
+    from statistics import median
+except ImportError:
+    print("So you're a Linux user...ok let's continue!")
+    
+try:
+    import numpy
+    from numpy import median
+except ImportError:
+    print("So you're a Windows user..ok let's continue!")
+
+import sys
+
+inputFile = sys.argv[1]
+outputFile = sys.argv[2]
 
 wordsPerTweet = []
 medianNumberOfWords = []
-tweet = open("../tweet_input/tweets.txt","r")
+
+tweet = open(inputFile,"r")
 for line in tweet:
     tweetWords = line.split()
             
     wordsPerTweet.append(len(line.split()))
-    medianNumberOfWords.append(statistics.median(wordsPerTweet))
+    medianNumberOfWords.append(median(wordsPerTweet))
 
-print("The median is: " +str(medianNumberOfWords))
+tweet.close()
+ft2 = open(outputFile,"w")
 
+ft2.write("The medians are: " +str(medianNumberOfWords))
+
+ft2.close()
+
+print("median_unique.py ran successfully! Please check the output file"+outputFile)
