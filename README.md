@@ -37,7 +37,7 @@ About the Solution:
     
     - median_unique.py
     The program attempts to do the following:
-    1) IT checks which system the user is using and dpending on that it imports the proper library that works for the system.
+    1) It checks which system the user is using and dpending on that it imports the proper library that works for the system.
     2) Open the tweets.txt test file.
     3) It then goes to each line in the text and splits it into words (after each space it counts as a word).
     4) It takes each line and splits it into words and appends it to wordsPerTweet.
