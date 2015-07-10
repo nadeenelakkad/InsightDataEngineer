@@ -1,7 +1,7 @@
 # example of program that calculates the total number of times each word has been tweeted.
 WordDictionary = {}
 
-tweet = open("tweets.txt","r")
+tweet = open("../tweet_input/tweets.txt","r")
 for line in tweet:
     tweetWords = line.split()
     for word in tweetWords:

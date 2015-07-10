@@ -3,7 +3,7 @@ import statistics
 
 wordsPerTweet = []
 medianNumberOfWords = []
-tweet = open("tweets.txt","r")
+tweet = open("../tweet_input/tweets.txt","r")
 for line in tweet:
     tweetWords = line.split()
             
